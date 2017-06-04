@@ -38,7 +38,6 @@ def count_words(phrase):
         else:
             unique_words[word] += 1
 
-
     return unique_words
 
 
