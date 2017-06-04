@@ -150,22 +150,32 @@ def translate_to_pirate_talk(phrase):
     """
 
     translation = {
-        "sir": "matey",
-        "hotel": "fleabag inn",
-        "student": "swabbie",
-        "man": "matey",
-        "professor": "foul blaggart",
-        "restaurant": "galley",
-        "your": "yer",
-        "excuse": "arr",
-        "students": "swabbies",
-        "are": "be",
-        "restroom": "head",
-        "my": "me",
-        "is": "be"
-    }
+            "sir": "matey",
+            "hotel": "fleabag inn",
+            "student": "swabbie",
+            "man": "matey",
+            "professor": "foul blaggart",
+            "restaurant": "galley",
+            "your": "yer",
+            "excuse": "arr",
+            "students": "swabbies",
+            "are": "be",
+            "restroom": "head",
+            "my": "me",
+            "is": "be"
+        }
 
-    return ""
+    split_phrase = phrase.split(" ")
+    translated_list = []
+
+    for word in split_phrase:
+        if word in translation:
+            word = translation[word]
+            translated_list.append(word)
+        else:
+            translated_list.append(word)
+
+    return " ".join(translated_list)
 
 
 def kids_game(names):
@@ -214,7 +224,72 @@ def kids_game(names):
     good solutions here will definitely require a dictionary.
     """
 
-    return []
+    # Holy cow. This is a super fun and challenging puzzle. I spent
+    # about 2 hrs on it (while only 1 hr for all the previous problems)
+    # and I think I should stop. BUT I WANNA SOLVE IT! But, it's time to
+    # move on to the classes assessment. I hope whoever is reading this
+    # can make some sense of what I was trying to do below. :) Thanks! 
+
+    # # dict only has unique keys
+    # # this will help check if we've already used the word
+    # words_already_used = {}
+    # solved = []
+    # index = 0
+
+    # # keeps loop going until all possible words exhausted
+    # # ? while True: ?
+    # if index < (len(names) - 1):
+    #     for word in names:
+    #         print "word at first for loop:" + word
+
+    #         # first word will always go into solution
+    #         # kicks off the puzzle
+    #         if solved == []:
+    #             solved.append(word)
+    #             words_already_used[word] = index
+
+    #         word_split = list(word)
+    #         last_letter = word_split[-1]
+
+    #         # moves loop to next word in list
+    #         # why isn't it giving back the very next word??
+    #         for other_word in names:
+    #             other_word_split = list(other_word)
+    #             first_letter = other_word_split[0]
+
+    #         print "word:" + word
+    #         print "solved:" + str(solved)
+    #         print words_already_used
+    #         print "last_letter:" + last_letter
+    #         print "other_word:" + other_word
+    #         print "first_letter:" + first_letter
+    #         print "============"
+
+    #     index += 1     
+            
+
+    #     #         if last_letter == first_letter:
+    #     #             # checks if we've already used this word
+    #     #             if words_already_used.get(other_word) == None:
+    #     #                 solved.append(word)
+    #     #                 words_already_used[other_word] = (index + 1)
+
+    #     #             print words_already_used
+
+    #     #                 # else:
+    #     #                 #     # if no more words available because we're back to our word
+    #     #                 #     # if our word has looped all the way around and ends up 
+    #     #                 #     # at the same index
+    #     #                 #     if index == words_already_used[word].keys():
+    #     #                 #         return solved 
+    #     #                 #     else:
+    #     #                 #         continue
+
+    #     # # even if loop reaches end, but needs to keep looking, the index will let
+    #     # # it keep looping, instead of ending on last item of list                 
+    #     # elif index == (len(names) - 1):
+    #     #     index = 0
+    #     # index += 1
 
 #####################################################################
 # You can ignore everything below this.
